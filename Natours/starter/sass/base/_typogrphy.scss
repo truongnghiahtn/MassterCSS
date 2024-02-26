@@ -1,0 +1,66 @@
+.heading-primary {
+  color: $color-white;
+  font-weight: 400;
+
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+  &--main {
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    display: block;
+    animation: moveLeft 1s ease-out;
+    @include respond(phone){
+      letter-spacing: 1rem;
+      font-size: 4.5rem;
+    }
+  }
+  &--sub {
+    font-size: 2.4rem;
+    letter-spacing: 1.2rem;
+    display: block;
+    animation: moveRight 1s ease-out;
+    @include respond(phone){
+      letter-spacing: 1rem;
+      font-size: 2rem;
+    }
+  }
+}
+.heading-second {
+  font-size: 4rem;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-black, 0.75),
+    rgba($color-primary-dark, 0.75)
+  );
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  font-weight: 700;
+  backface-visibility:hidden;
+  cursor: pointer;
+  transition: all 0.2s;
+  @include respond(tab-port){
+    font-size: 3rem;
+  }
+  @include respond(phone){
+    font-size: 2.5rem;
+    letter-spacing: .15rem;
+  }
+  &:hover{
+    transform: skewX(10deg) skewY(2deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem  rgba($color-black, 0.3);
+  }
+}
+.heading-third{
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.paragraph{
+  &:not(:last-child){
+    margin-bottom: 3rem;
+  }
+}

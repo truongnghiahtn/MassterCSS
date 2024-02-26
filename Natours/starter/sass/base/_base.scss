@@ -1,0 +1,33 @@
+/* ý nghĩa của *{} là thuốc tính sẽ can thiệp hết tất các {} */
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 62.5%;
+    @include respond(tab-land){
+      font-size: 56.25%; // 1rem = 9px
+    }
+
+    @include respond(tab-port){
+      font-size: 50%; // 1rem =8px
+    }
+
+    @include respond (big-destop){
+      font-size: 75%; // 1rem = 12px
+    }
+  }
+  /* ý nghĩa ở đây là tất các {} đều là con của body */
+  body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-primary-text;
+    padding: 2.5rem;
+    padding-bottom: 0rem;
+    @include respond(tab-port){
+      padding: 0;
+    }
+  }
